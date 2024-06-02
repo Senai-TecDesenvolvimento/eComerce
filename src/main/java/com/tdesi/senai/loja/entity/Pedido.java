@@ -14,9 +14,12 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @ManyToOne
     private Usuario usuario;
+
     private String feedback;
+
     private Float total;
 
 
