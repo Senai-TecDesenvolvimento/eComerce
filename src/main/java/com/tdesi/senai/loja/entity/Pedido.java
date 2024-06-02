@@ -13,7 +13,7 @@ public class Pedido {
     // Atributos da classe 'Pedido'
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @ManyToOne
     private Usuario usuario;
@@ -23,8 +23,8 @@ public class Pedido {
     private Float total;
 
 
-    // Construtor Completo da classe 'Pedido'
-    public Pedido(String feedback, long id, Float total, Usuario usuario) {
+    // Construtor completo da classe 'Pedido'
+    public Pedido(String feedback, Long id, Float total, Usuario usuario) {
         this.feedback = feedback;
         this.id = id;
         this.total = total;
@@ -33,10 +33,10 @@ public class Pedido {
 
 
     // Getters e Setters da classe 'Pedido'
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public Usuario getUsuario() {

@@ -19,11 +19,11 @@ public class Usuario {
     private String senha;
     private String cep;
     private String telefone;
-    private int isAdmin;
+    private Integer isAdmin;
 
 
-    // Construtor Completo da classe 'Usuario'
-    public Usuario(String cep, String cpf, String email, Long id, int isAdmin, String nome, String senha, String telefone) {
+    // Construtor completo da classe 'Usuario'
+    public Usuario(String cep, String cpf, String email, Long id, Integer isAdmin, String nome, String senha, String telefone) {
         this.cep = cep;
         this.cpf = cpf;
         this.email = email;
@@ -92,11 +92,11 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public int getIsAdmin() {
+    public Integer getIsAdmin() {
         return isAdmin;
     }
 
-    public void setIsAdmin(int isAdmin) {
+    public void setIsAdmin(Integer isAdmin) {
         this.isAdmin = isAdmin;
     }
 
