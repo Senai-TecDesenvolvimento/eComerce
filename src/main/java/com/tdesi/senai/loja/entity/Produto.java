@@ -7,6 +7,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import com.tdesi.senai.loja.model.Categoria;
+
 
 @Entity(name = "produto")
 public class Produto {

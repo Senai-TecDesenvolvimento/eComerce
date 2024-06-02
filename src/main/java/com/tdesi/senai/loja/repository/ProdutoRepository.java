@@ -11,7 +11,8 @@ import com.tdesi.senai.loja.entity.Produto;
  */
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     
-    @Query(value = "select p from Produto p where p.id = ?1")
+    //@Query(value = "select p from Produto p where p.id = ?1")
+    @Query(value = "select id from produto")
     public Produto getProduto(Long id);
 
 }

@@ -11,7 +11,8 @@ import com.tdesi.senai.loja.entity.Pedido;
  */
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
     
-    @Query(value = "select p from Pedido p where p.id = ?1")
+    //@Query(value = "select p from Pedido p where p.id = ?1")
+    @Query(value = "select id from pedido")
     public Pedido getPedido(Long id);
 
 }

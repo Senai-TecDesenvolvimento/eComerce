@@ -11,7 +11,8 @@ import com.tdesi.senai.loja.entity.Usuario;
  */
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     
-    @Query(value = "select u from Usuario u where u.id = ?1")
+    //@Query(value = "select u from Usuario u where u.id = ?1")
+    @Query(value = "select id from usuario")
     public Usuario getUsuario(Long id);
 
 }
