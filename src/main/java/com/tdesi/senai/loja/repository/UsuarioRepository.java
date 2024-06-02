@@ -9,7 +9,7 @@ import com.tdesi.senai.loja.entity.Usuario;
  * Interface 'UsuarioRepository'
  * Esta interface extende JpaRepository para fornecer operações CRUD padrão para a entidade Usuario.
  */
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     
     @Query(value = "select u from Usuario u where u.id = ?1")
     public Usuario getUsuario(Long id);
