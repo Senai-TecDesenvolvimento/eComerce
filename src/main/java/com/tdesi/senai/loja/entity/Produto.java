@@ -6,6 +6,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.Set;
 
 import com.tdesi.senai.loja.model.Categoria;
 
@@ -28,6 +30,9 @@ public class Produto {
 
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
+
+    @OneToMany(mappedBy = "produto")
+    private Set<Pedidos_has_Produtos> pedidoHasProdutos;
 
 
     // Construtor completo da classe 'Produto'
@@ -89,6 +94,14 @@ public class Produto {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public Set<Pedidos_has_Produtos> getPedidoHasProdutos() {
+        return pedidoHasProdutos;
+    }
+
+    public void setPedidoHasProdutos(Set<Pedidos_has_Produtos> pedidoHasProdutos) {
+        this.pedidoHasProdutos = pedidoHasProdutos;
     }
 
 }
